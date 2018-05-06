@@ -1,0 +1,24 @@
+<h2>Login</h2>
+<hr>
+<form name="loginForm"  action="http://localhost:3000/#/login" ng-submit="sendData(login)" novalidate class="form-horizontal">
+    <div class="form-group">
+        <label class="col-md-2">Name</label>
+        <div class="col-md-10">
+            <input type="text" ng-model="login.name" name="name" ng-required="true" class="form-control" />
+            <p ng-show="loginForm.name.$error.required && (loginForm.$submitted || loginForm.name.$dirty)" class="text-danger">Please Enter Name</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2">password</label>
+        <div class="col-md-10">
+            <input type="password" ng-model="login.password" name="password" ng-required="true" class="form-control" />
+            <p ng-show="loginForm.password.$error.required && (loginForm.$submitted || loginForm.password.$dirty)" class="text-danger">Please Enter Contact No.</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Login" class="btn btn-primary" />
+            <a ui-sref="phones" class="btn btn-warning">Cancel</a>
+        </div>
+    </div>
+</form>
